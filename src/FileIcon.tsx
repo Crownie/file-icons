@@ -3,7 +3,7 @@ import {getIconFileName} from './utils';
 
 interface Props {
   type: string; // mimetype or file extension e.g.image/jpeg or jpeg
-  className: string;
+  className?: string;
   style?: any;
 }
 
