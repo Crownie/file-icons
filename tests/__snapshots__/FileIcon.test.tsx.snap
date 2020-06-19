@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `"<img alt=\\"pdf.svg\\" src=\\"[object Object]\\" class=\\"dummy-class\\" style=\\"width: 20px; height: 20px;\\">"`;
