@@ -9,7 +9,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "npm run clean && tsc",
+    "build": "npm run clean && tsc && cp -r src/img dist/img",
     "clean": "rimraf dist",
     "prettier": "prettier --write \"*(src|tests)/**/*.*(ts|tsx)\"",
     "test": "jest",

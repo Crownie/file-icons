@@ -1,7 +1,7 @@
 import React from 'react';
 import '@testing-library/jest-dom';
 import {render} from '@testing-library/react';
-import {FileIcon} from '../src';
+import FileIcon from '../src';
 
 const testTypes = (type, fileName) => {
   let res = render(<FileIcon type={type} />);
