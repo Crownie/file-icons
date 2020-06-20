@@ -19,6 +19,7 @@ module.exports = {
   },
   externals: {
     react: 'react',
+    'lodash.kebabcase': 'lodash.kebabcase',
     'mime-types': 'mime-types',
   },
   module: {
