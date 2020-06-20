@@ -10,21 +10,19 @@ interface Props {
   style?: any;
 }
 
-export const FileIcon: FunctionComponent<Props> = ({
-  type,
-  className,
-  style = {},
-}) => {
-  const ext = isMimeType(type) ? mimeTypes.extension(type) : type;
-  let fileKey = getIconType(ext);
-  const fileName = kebabCase(fileKey) + '.svg';
-  const fileImg = FILE_ICON_MAP[fileKey];
-  return (
-    <img
-      alt={fileName}
-      src={fileImg.default}
-      className={className}
-      style={style}
-    />
-  );
-};
+export const FileIcon: FunctionComponent<Props> = React.memo(
+  ({type, className, style = {}}) => {
+    const ext = isMimeType(type) ? mimeTypes.extension(type) : type;
+    let fileKey = getIconType(ext);
+    const fileName = kebabCase(fileKey) + '.svg';
+    const fileImg = FILE_ICON_MAP[fileKey];
+    return (
+      <img
+        alt={fileName}
+        src={fileImg.default}
+        className={className}
+        style={style}
+      />
+    );
+  },
+);
