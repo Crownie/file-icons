@@ -1,13 +1,13 @@
 import {FILE_TYPE_MAP} from './constant';
-import kebabCase from 'lodash.kebabcase';
-export const getIconFileName = function getIconType(ext: string): string {
+
+export var getIconType = function getIconType(extname) {
   let fileType = 'common';
-  Object.keys(FILE_TYPE_MAP).map(function (type) {
-    FILE_TYPE_MAP[type].map(function (name) {
-      if (name === ext) {
-        fileType = type;
+  Object.entries(FILE_TYPE_MAP).map(([key, val]) => {
+    val.map(function (name) {
+      if (name === extname) {
+        fileType = key;
       }
     });
   });
-  return kebabCase(fileType) + '.svg';
+  return fileType;
 };
