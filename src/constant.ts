@@ -68,6 +68,7 @@ export const FILE_TYPE_MAP = {
     'ape',
     'flac',
     'aac',
+    'mpga',
   ],
   numbers: ['numbers'],
   pages: ['pages'],
