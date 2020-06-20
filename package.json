@@ -1,7 +1,7 @@
 {
   "name": "@crownie/file-icons",
   "version": "1.0.1",
-  "description": "",
+  "description": "File icons library for React",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",

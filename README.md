@@ -1,6 +1,8 @@
 [![NPM Version][npm-image]][npm-url]
 [![Github License][license-image]][license-url]
 
+File icons library for React
+
 ## Installation
 
 Npm
