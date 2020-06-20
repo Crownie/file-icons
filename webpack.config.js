@@ -8,14 +8,18 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].js',
-    libraryTarget: 'commonjs',
+    libraryTarget: 'commonjs2',
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js'],
   },
   devtool: 'source-map',
   optimization: {
-    minimize: true,
+    minimize: false,
+  },
+  externals: {
+    react: 'react',
+    'mime-types': 'mime-types',
   },
   module: {
     rules: [
