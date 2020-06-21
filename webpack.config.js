@@ -1,5 +1,20 @@
 const path = require('path');
 
+function DtsBundlePlugin() {}
+DtsBundlePlugin.prototype.apply = function (compiler) {
+  compiler.plugin('done', function () {
+    const dts = require('dts-bundle');
+
+    dts.bundle({
+      name: 'spp-web-ui-common-header',
+      main: 'dist/**/*.d.ts',
+      out: 'index.d.ts',
+      removeSource: true,
+      outputAsModuleFolder: true, // to use npm in-package typings
+    });
+  });
+};
+
 module.exports = {
   mode: 'production',
   entry: {
@@ -22,6 +37,7 @@ module.exports = {
     'lodash.kebabcase': 'lodash.kebabcase',
     'mime-types': 'mime-types',
   },
+  plugins: [new DtsBundlePlugin()],
   module: {
     rules: [
       {
